@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Projektarbeit_EDV_Messung_Lib.Services;
 
 namespace Projektarbeit_EDV_MessungsApp
 {
@@ -20,6 +21,7 @@ namespace Projektarbeit_EDV_MessungsApp
     		builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<IMessungService, MessungService>();
 
             return builder.Build();
         }

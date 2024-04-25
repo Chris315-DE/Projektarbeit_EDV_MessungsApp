@@ -1,0 +1,59 @@
+﻿@page "/add_update_Messung"
+
+
+
+
+
+<EditForm Model="model">
+    <div class="container">
+        <h3>Prüfung</h3>
+        <div class="form-control">
+            <div class="row">
+                <div class="col">
+                    <h5>SN</h5>
+                </div>
+                <div class="col">
+                    <InputText @bind-Value="model.GeräteNummer"></InputText>
+                </div>
+            </div>
+        </div>
+        <div class="form-control">
+            <div class="row">
+                <div class="col">
+                    <h5>RPE</h5>
+                </div>
+                <div class="col">
+                    <InputNumber @bind-Value="model.RPE"></InputNumber>
+                </div>
+            </div>
+        </div>
+        <div class="form-control">
+            <div class="row">
+                <div class="col">
+                    <h5>IEA</h5>
+                </div>
+                <div class="col">
+                    <InputNumber @bind-Value="model.IEA"></InputNumber>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</EditForm>
+
+
+
+
+
+
+
+@code {
+
+    MessungsModel model = new();
+
+
+}
